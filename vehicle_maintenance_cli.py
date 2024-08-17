@@ -14,14 +14,17 @@ while 1:
     vehicles_string = "".join(vehicles)
     garage = vehicles_string or "(garage is empty)\n"
 
+    print("ENTER 'x' AT ANY POINT TO STOP THE PROGRAM")
     vehicle = input(f"Current Garage:\n {garage}"
-                    f"Enter the name of the vehicle worked on or type 'x' to stop the program: ").strip()
-
+                    f"Enter the name of the vehicle worked on: ").strip().lower()
     if vehicle == "x":
         break
-
     mileage = input("Mileage: ")
+    if mileage == "x":
+        break
     work_done = input("Work done: ")
+    if work_done == "x":
+        break
 
     mileage_time_date = time.strftime(f"{mileage}mi_Time_%H_%M_%S_Date_%m_%d_%Y")
 
