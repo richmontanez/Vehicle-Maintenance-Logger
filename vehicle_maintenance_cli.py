@@ -1,7 +1,5 @@
 import time
 import os
-import pathlib
-
 
 if not os.path.exists("logs"):
     os.mkdir("logs")
@@ -29,7 +27,7 @@ while 1:
 
     if (vehicle + "\n") in vehicles:
 
-        filepath = "logs/{vehicle}/{mileage_time_date}.txt"
+        filepath = f"logs/{vehicle}/{mileage_time_date}.txt"
     else:
         with open("logs/vehicles.txt") as current_vehicles:
             current = current_vehicles.readlines()
