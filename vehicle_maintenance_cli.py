@@ -15,8 +15,11 @@ while 1:
     garage = vehicles_string or "(garage is empty)\n"
 
     print("ENTER 'x' AT ANY POINT TO STOP THE PROGRAM")
+
     vehicle = input(f"Current Garage:\n {garage}"
-                    f"Enter the name of the vehicle worked on: ").strip().lower()
+                    f"Enter the name of the vehicle worked on: ")
+    vehicle.strip()
+    vehicle.lower()
     if vehicle == "x":
         break
     mileage = input("Mileage: ")
