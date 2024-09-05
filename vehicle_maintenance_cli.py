@@ -20,6 +20,7 @@ while 1:
                     f"Enter the name of the vehicle worked on: ")
     vehicle.strip()
     vehicle.lower()
+
     if vehicle == "x":
         break
     mileage = input("Mileage: ")
